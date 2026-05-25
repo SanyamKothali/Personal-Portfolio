@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Portfolio of Sanyam Kothali - Junior Software Developer & Full Stack MERN Stack Developer. Exploring modern responsive designs, clean APIs, databases and state-of-the-art web products." />
+    <title>Sanyam Kothali | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Header / Glass Sticky Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo" id="logoLink">
+                <span>S</span>anyam
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-btn" id="themeBtn" aria-label="Toggle Dark/Light Mode" id="themeToggler">
+                    <!-- Moon Icon -->
+                    <svg class="icon-moon" viewBox="0 0 24 24" id="moonIcon">
+                        <path d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.99z" />
+                    </svg>
+                    <!-- Sun Icon (Hidden by default, handled in JS/CSS) -->
+                    <svg class="icon-sun" viewBox="0 0 24 24" id="sunIcon" style="display:none;">
+                        <path
+                            d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-7a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zM5.636 4.222a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 1 1-1.414 1.414L5.636 5.636a1 1 0 0 1 0-1.414zm11.314 11.314a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 0 1-1.414 1.414l-1.414-1.414a1 1 0 0 1 0-1.414zM3 11a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1zm16 0a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1zM6.343 17.657l1.414-1.414a1 1 0 1 1 1.414 1.414l-1.414 1.414a1 1 0 0 1-1.414-1.414zm11.314-11.314l1.414-1.414a1 1 0 0 1 1.414 1.414l-1.414 1.414a1 1 0 0 1-1.414-1.414z" />
+                    </svg>
+                </button>
+                <button class="menu-btn" id="menuBtn" aria-label="Open Mobile Menu" id="menuToggler">
+                    <!-- Hamburger Icon -->
+                    <svg viewBox="0 0 24 24" id="hamburgerIcon">
+                        <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Glowing spotlight spheres -->
+    <div class="glow-spot glow-spot-1"></div>
+    <div class="glow-spot glow-spot-2"></div>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="hero-container">
+
+            <div class="hero-content reveal">
+                <div class="tag">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M5.41 20L4 18.59l7.59-7.59L4 3.41 5.41 2 14.41 11l-9 9zm10 0L14 18.59l7.59-7.59L14 3.41 15.41 2 24.41 11l-9 9z" />
+                    </svg>
+                    Ready To Innovate
+                </div>
+
+                <h1>Hi, I'm <span>Sanyam Kothali</span></h1>
+
+                <h2>
+                    <span class="hero-typing" id="typingElement">Junior Software Developer</span>
+                </h2>
+
+                <p class="hero-desc">
+                    I build premium, responsive and highly performant full-stack web applications.
+                    Specialized in MERN stack development and crafting production-ready APIs, schemas and UI layouts.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">
+                        <span>View Projects</span>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn secondary-btn">
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item glass-container">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Production Apps</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-item glass-container">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stat-number">MERN</div>
+                            <div class="stat-label">Full Stack</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Sidebar Graphic -->
+            <div class="hero-card reveal">
+                <div class="profile-card glass-container">
+                    <div class="profile-img-container">
+                        <div class="profile-glow"></div>
+                        <img src="profile.jpg" alt="Sanyam Kothali" class="profile-img" style="object-fit: cover;" />
+                    </div>
+
+                    <h3>Sanyam Kothali</h3>
+                    <p>Junior Software Developer</p>
+
+                    <div class="profile-socials">
+                        <a href="https://github.com/SanyamKothali" target="_blank" class="social-circle"
+                            aria-label="GitHub">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/sanyam-kothali" target="_blank" class="social-circle"
+                            aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="https://leetcode.com/sanyam_kothali" target="_blank" class="social-circle"
+                            aria-label="LeetCode">
+                            <!-- LeetCode Custom Path -->
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M16.102 17.93l-2.69 2.607c-.466.451-1.211.451-1.677 0l-4.51-4.375a1.244 1.244 0 0 1 0-1.707l4.51-4.375c.466-.451 1.211-.451 1.677 0l2.69 2.607a1.244 1.244 0 0 1 0 1.707 1.244 1.244 0 0 1-1.677 0l-2.12-2.055L8.53 15.228l3.784 3.667 2.12-2.055a1.244 1.244 0 0 1 1.677 0c.463.45.463 1.18 0 1.631-.027.026-.027.026-.027.026zM22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zM12 3.64C7.39 3.64 3.64 7.39 3.64 12c0 4.61 3.75 8.36 8.36 8.36 4.61 0 8.36-3.75 8.36-8.36 0-4.61-3.75-8.36-8.36-8.36z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="profile-tags">
+                        <span>React.js</span>
+                        <span>Node.js</span>
+                        <span>SpringBoot</span>
+                        <span>MySQL</span>
+                        <span>MongoDB</span>
+                        <span>Java</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="section-heading reveal">
+            <p>About Me</p>
+            <h2>My Journey & Focus</h2>
+        </div>
+
+        <div class="about-container">
+            <div class="about-text glass-container reveal">
+                <h3>Passionate Developer Specializing in Modular Architecture & Modern UIs</h3>
+
+                <p>
+                    I am Sanyam Kothali, a computer science graduate and an active Junior Software Developer. I thrive
+                    in crafting robust, pixel-perfect user interfaces and connecting them seamlessly to fast backend
+                    systems.
+                </p>
+
+                <p>
+                    From implementing high-security role-based dashboards to managing complex databases like SQL and
+                    MongoDB, my passion lies in writing readable, maintainable, and high-performance code. I aim to
+                    constantly expand my toolkit and solve real-world industry problems.
+                </p>
+
+                <div class="about-details">
+                    <div class="detail-item">
+                        <strong>Name</strong>
+                        <span>Sanyam Kothali</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Email</strong>
+                        <span>sanyamkothali2004@gmail.com</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Role</strong>
+                        <span>Junior Software Developer</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Location</strong>
+                        <span>Kolhapur, Maharashtra, India</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Highlight Grid Cards -->
+            <div class="about-highlights reveal">
+                <div class="highlight-card glass-container">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                        </svg>
+                    </div>
+                    <div class="highlight-info">
+                        <h4>Frontend Architecture</h4>
+                        <p>Designing custom, responsive components with maximum scalability and lightning-fast user
+                            interactions.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card glass-container">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" />
+                        </svg>
+                    </div>
+                    <div class="highlight-info">
+                        <h4>Backend & Databases</h4>
+                        <p>Building secure REST APIs, role authorization flows, and scalable MongoDB or MySQL schemas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Interactive Timeline) -->
+    <section class="experience section" id="experience">
+        <div class="section-heading reveal">
+            <p>Career Timeline</p>
+            <h2>Work Experience</h2>
+        </div>
+
+        <div class="experience-container">
+            <!-- Timeline Node 1: SPCL Infotech -->
+            <div class="timeline-item reveal">
+                <div class="timeline-badge"></div>
+                <div class="timeline-card glass-container">
+                    <span class="timeline-date">Jan 2026 – Current</span>
+                    <h3>Junior Software Developer</h3>
+                    <div class="timeline-company">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 7V3H2v18h20V7H12zm-2 12H4v-2h6v2zm0-4H4v-2h6v2zm0-4H4V9h6v2zm10 8h-8v-2h8v2zm0-4h-8v-2h8v2zm0-4h-8V9h8v2z" />
+                        </svg>
+                        <span>SPCL Infotech Services Pvt. Ltd. | Pune, India</span>
+                    </div>
+                    <ul class="timeline-desc">
+                        <li>Worked on enterprise web application development using <strong>HTML, CSS, JavaScript, MySQL,
+                                and SpringBoot</strong>.</li>
+                        <li>Built and enhanced responsive, light/dark responsive UI components with improved user
+                            experience and page speeds.</li>
+                        <li>Collaborated closely with cross-functional team members to implement robust APIs and
+                            integrate secure backend functionality.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Timeline Node 2: Wolfox Services -->
+            <div class="timeline-item reveal">
+                <div class="timeline-badge"></div>
+                <div class="timeline-card glass-container">
+                    <span class="timeline-date">Aug 2023 – Aug 2023</span>
+                    <h3>Front-End Intern</h3>
+                    <div class="timeline-company">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 7V3H2v18h20V7H12zm-2 12H4v-2h6v2zm0-4H4v-2h6v2zm0-4H4V9h6v2zm10 8h-8v-2h8v2zm0-4h-8v-2h8v2zm0-4h-8V9h8v2z" />
+                        </svg>
+                        <span>Wolfox Services Pvt. Ltd. | Remote - Kolhapur, India</span>
+                    </div>
+                    <ul class="timeline-desc">
+                        <li>Assisted senior web developers in designing and developing commercial websites using
+                            <strong>HTML, CSS, and JavaScript</strong>.</li>
+                        <li>Successfully developed an upcoming-movies tracking web portal utilizing <strong>HTML, CSS,
+                                JavaScript, and React.js</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="section-heading reveal">
+            <p>Expertise</p>
+            <h2>Technical Skills</h2>
+        </div>
+
+        <div class="skills-wrapper reveal">
+            <!-- Languages & Databases -->
+            <div class="skills-category glass-container">
+                <h3>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                    </svg>
+                    Languages & Databases
+                </h3>
+                <div class="skills-items">
+                    <div class="skill-pill">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                        </svg>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-pill">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        <span>Python (basic)</span>
+                    </div>
+                    <div class="skill-pill">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm1 10h3l-4-4-4 4h3v4h2v-4z" />
+                        </svg>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-pill">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                        </svg>
+                        <span>SQL / MySQL</span>
+                    </div>
+                    <div class="skill-pill">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z" />
+                        </svg>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frameworks & Tools -->
+            <div class="skills-category glass-container">
+                <h3>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.3C.5 6.7.9 9.8 2.9 11.8c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.5z" />
+                    </svg>
+                    Frameworks & Tools
+                </h3>
+                <div class="skills-items">
+                    <div class="skill-pill">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v4h2v-4h3l-4-4-4 4h3z" />
+                        </svg>
+                        <span>React.js</span>
+                    </div>
+                    <div class="skill-pill">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                        </svg>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-pill">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                        </svg>
+                        <span>Express.js</span>
+                    </div>
+                    <div class="skill-pill">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z" />
+                        </svg>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="section-heading reveal">
+            <p>My Creations</p>
+            <h2>Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Project Card 1: Attendify -->
+            <div class="project-card glass-container reveal">
+                <div class="project-glow"></div>
+                <div class="project-top">
+                    <span class="project-number">01</span>
+                    <div class="project-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <h3>Attendify</h3>
+                <p>
+                    A full-scale Employee Attendance Management System featuring role-based dashboards, secure tracking,
+                    and interactive analytics. Designed for high efficiency and secure data handling.
+                </p>
+
+                <div class="tech-stack">
+                    <span>SpringBoot</span>
+                    <span>MySQL</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://attendify.vercel.app/" target="_blank">
+                        <span>Live Demo</span>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/SanyamKothali" target="_blank">
+                        <span>GitHub</span>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 2: Helper Hub -->
+            <div class="project-card glass-container reveal">
+                <div class="project-glow"></div>
+                <div class="project-top">
+                    <span class="project-number">02</span>
+                    <div class="project-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2s-2-.9-2-2V4c0-1.1.9-2 2-2zm6 4c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2s-2-.9-2-2V8c0-1.1.9-2 2-2zM6 10c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2s-2-.9-2-2v-4c0-1.1.9-2 2-2z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <h3>Helper Hub</h3>
+                <p>
+                    An on-demand service booking application designed with intuitive user schedules. Built optimized API
+                    endpoints and advanced state management to compress scheduling times by 40%.
+                </p>
+
+                <div class="tech-stack">
+                    <span>React Native</span>
+                    <span>MongoDB</span>
+                    <span>JavaScript</span>
+                    <span>API Design</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/SanyamKothali" target="_blank">
+                        <span>GitHub Repository</span>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 3: Mental Health Support Platform -->
+            <div class="project-card glass-container reveal">
+                <div class="project-glow"></div>
+                <div class="project-top">
+                    <span class="project-number">03</span>
+                    <div class="project-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <h3>Mental Health Platform</h3>
+                <p>
+                    A comprehensive wellness network built on MERN Stack. Integrated with encrypted user authentication,
+                    real-time feedback, interactive progress trackers, and fluid, responsive UI boards.
+                </p>
+
+                <div class="tech-stack">
+                    <span>MongoDB</span>
+                    <span>Express.js</span>
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/SanyamKothali" target="_blank">
+                        <span>GitHub Repository</span>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education & Achievements Section -->
+    <section class="education section" id="education">
+        <div class="section-heading reveal">
+            <p>Qualifications</p>
+            <h2>Education & Achievements</h2>
+        </div>
+
+        <div class="edu-ach-container">
+            <!-- Left Side: Education List -->
+            <div class="edu-grid reveal">
+                <!-- SIT Card -->
+                <div class="edu-card glass-container">
+                    <div class="edu-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91v6.27h2V9L12 3z" />
+                        </svg>
+                    </div>
+                    <div class="edu-info">
+                        <div class="edu-meta">
+                            <span class="edu-date">Graduated Jan 2025</span>
+                        </div>
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <h4>Sharad Institute of Technology</h4>
+                        <p>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            Yadrav, Ichalkaranji, Maharashtra
+                        </p>
+                        <p class="edu-score">CGPA: 6.02</p>
+                    </div>
+                </div>
+
+                <!-- HSC Card -->
+                <div class="edu-card glass-container">
+                    <div class="edu-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91v6.27h2V9L12 3z" />
+                        </svg>
+                    </div>
+                    <div class="edu-info">
+                        <div class="edu-meta">
+                            <span class="edu-date">2020 – 2022</span>
+                        </div>
+                        <h3>HSC (Science)</h3>
+                        <h4>Sharad Science and Commerce College, Yadrav</h4>
+                        <p>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            Yadrav, Ichalkaranji, Maharashtra
+                        </p>
+                        <p class="edu-score">Score: 57.67%</p>
+                    </div>
+                </div>
+
+                <!-- SSC Card -->
+                <div class="edu-card glass-container">
+                    <div class="edu-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91v6.27h2V9L12 3z" />
+                        </svg>
+                    </div>
+                    <div class="edu-info">
+                        <div class="edu-meta">
+                            <span class="edu-date">2019 – 2020</span>
+                        </div>
+                        <h3>SSC (High School)</h3>
+                        <h4>Shri VidyaSagar HighSchool, Akiwat</h4>
+                        <p>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            Akiwat, Kolhapur, Maharashtra
+                        </p>
+                        <p class="edu-score">Score: 82.40%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Achievements & Accolades -->
+            <div class="ach-wrapper reveal">
+                <div class="ach-card glass-container">
+                    <div class="ach-badge-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 12c-2.7 0-5.8-1.28-6-2v-1.6c0-.88.39-1.76 1.1-2.44.7-.68 1.6-1.16 2.5-1.39C10.4 12.3 11.2 12.5 12 12.5s1.6-.2 2.4-.93c.9.23 1.8.71 2.5 1.39.7.68 1.1 1.56 1.1 2.44V17c-.2.72-3.3 2-6 2z" />
+                        </svg>
+                    </div>
+                    <h3>KG Coding Academy</h3>
+                    <p>
+                        Successfully completed and certified in the Comprehensive Advanced JavaScript Training Program
+                        hosted by KG Coding Academy Online. Skilled in scopes, asynchronous patterns, DOM operations,
+                        and data models.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="section-heading reveal">
+            <p>Connect</p>
+            <h2>Get In Touch</h2>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info glass-container reveal">
+                <h3>Let's Collaborate</h3>
+                <p>
+                    I am actively seeking software roles and exciting freelance projects. If you have an idea or just
+                    want to connect, feel free to drop a message or reach out via my contacts.
+                </p>
+
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <strong>Email</strong>
+                            <span>sanyamkothali2004@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <strong>Mobile</strong>
+                            <span>+91 8446144108</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <strong>Location</strong>
+                            <span>Akiwat, Kolhapur, Maharashtra</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elegant Contact Form -->
+            <form id="contact-form" class="contact-form glass-container reveal">
+                <div class="form-group">
+                    <label for="userName">Your Name</label>
+                    <input type="text" id="userName" name="from_name" placeholder="abc" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">Your Email</label>
+                    <input type="email" id="userEmail" name="from_email" placeholder="abc@gmail.com" required />
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="formSubject">Subject</label>
+                    <input type="text" id="formSubject" name="subject" placeholder="Let's build a Web Application"
+                        required />
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="formMessage">Your Message</label>
+                    <textarea id="formMessage" name="message" rows="6" placeholder="Hi Sanyam, let's discuss details..."
+                        required></textarea>
+                </div>
+
+                <div class="full-width">
+                    <button type="submit" class="btn primary-btn" id="send-btn">Send Message &gt;</button>
+                    <p id="form-status" style="margin-top: 15px; font-weight: bold; text-align: center;"></p>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2026 Sanyam Kothali. All Rights Reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/SanyamKothali" target="_blank" class="social-circle" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/sanyam-kothali" target="_blank" class="social-circle"
+                    aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Stylized Toast Elements -->
+    <div class="toast-notification" id="toastBox">
+        <svg viewBox="0 0 24 24">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
+        <span id="toastMsg">Message Submitted Successfully!</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
